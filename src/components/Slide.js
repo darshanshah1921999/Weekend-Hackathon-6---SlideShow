@@ -22,7 +22,11 @@ const Slide = (props) => {
     <>
       <h1 data-testid="title">{slides[index].title}</h1>
       <p data-testid="text">{slides[index].text}</p>
-      <button data-testid="button-restart" onClick={handleRestartClick}>
+      <button
+        disabled={index === 0}
+        data-testid="button-restart"
+        onClick={handleRestartClick}
+      >
         Restart
       </button>
       <button
